@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/fullpage.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+</head>
+<body>
+<main>
+	<header>
+		<div class="header-top clearfix">
+		  <h1 class="l-left"><a href="#firstSection">Logo</a></h1>
+		  <a class="l-right toggle-menu" href="#">
+			<i></i>
+			<i></i>
+			<i></i>
+		  </a>
+		</div>
+	  
+		<nav class="hide">
+		  <ul id="menu">
+			<li data-menuanchor="firstSection">
+			  <a href="#firstSection" title="First Section">First Section</a>
+			</li>
+			<li data-menuanchor="secondSection">
+			  <a href="#secondSection" title="Second Section">Second Section</a>
+			</li>
+			<li data-menuanchor="thirdSection">
+			  <a href="#thirdSection" title="Second Section">Third Section</a>
+			</li>
+			<li data-menuanchor="fourthSection">
+			  <a href="#fourthSection" title="Fourth Section">Fourth Section</a>
+			</li>
+			<li data-menuanchor="fifthSection">
+			  <a href="#fifthSection" title="First Slide">First Slide</a>
+			</li>
+			<li data-menuanchor="fifthSection/1">
+			  <a href="#fifthSection/1" title="Second Slide">Second Slide</a>
+			</li>
+		  </ul>
+		</nav>
+	  </header>
+	  
+	  <div id="fullpage">
+		<section class="vertical-scrolling logo-head">
+		  <div class="logo wow fadeIn" data-wow-duration="4s">
+			  <img src="css/img/Group 88.svg" alt="Sorry">
+		  </div>
+		  <div class="scroll-icon">
+			<p>Jump into the last slide</p>
+			<a href="#fifthSection/1" class="icon-up-open-big"></a>
+		  </div>
+		</section>
+		<section class="vertical-scrolling description">
+		<p class="description_text">
+		  IEPoS Is a lightweight Ethereum-based <br>
+		  ockchain solution with the ecological <br>
+		  Proof of Stake consenus suitable for <br>
+		  financial, supply chain, healthcare and <br> other industries.
+		</p>
+		</section>
+		<section class="vertical-scrolling">
+			<div class="hero">
+				<div class="hero-descr_wrapper">
+						<p class="description_text">Lightweight <br> industry networks</p>
+				  <span id="helper"></span>					
+						<p class="description_text bounce">Some smart <br> contracts, your <br> control over speed <br> and fees</p>						
+				</div>
+				<div>
+					<img id="main-banner" src="css/img/Group 72.svg" alt="Sorry">
+				</div>
+				<div class="hero-descr_wrapper">
+						<p class="description_text">Customizable UI <br> wallets</p>
+				  <span id="helper"></span>
+						<p class="description_text">Enterprise <br> level <br> support</p>
+				</div>
+			</div>
+		</section>
+		<section class="vertical-scrolling">
+		  <h2 class="wow slideInRight">fullPage.js</h2> 
+		  <h3>This is the fourth section</h3>
+		</section>
+		<section class="vertical-scrolling">
+		  <div class="horizontal-scrolling">
+			<h2>fullPage.js</h2>
+			<h3>This is the fifth section and it contains the first slide (actually section == first slide)</h3>
+		  </div>
+		  <div class="horizontal-scrolling">
+			<h2>fullPage.js</h2>
+			<h3>This is the second slide</h3> 
+			<p class="end">Thank you!</p>
+		  </div>
+		</section>
+	  </div>
+</main>
+<script src="js/main.js"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/fullpage.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+	new WOW().init();
+</script>
+</body>
+</html>

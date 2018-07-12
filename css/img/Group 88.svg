@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 944.812 400">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #dcdbdb;
+      }
+
+      .cls-1 {
+        font-size: 104px;
+        font-family: FuturaPT-Demi, Futura PT;
+        font-weight: 300;
+      }
+
+      .cls-3 {
+        fill: #e41513;
+      }
+    </style>
+  </defs>
+  <g id="Group_88" data-name="Group 88" transform="translate(-513 -331)">
+    <text id="Applicature_Ethereum_Proof_of_Stake" data-name="Applicature
+Ethereum
+Proof of Stake" class="cls-1" transform="translate(829.812 433)"><tspan x="0" y="0">Applicature</tspan><tspan x="0" y="133">Ethereum</tspan><tspan x="0" y="266">Proof of Stake</tspan></text>
+    <g id="Group_87" data-name="Group 87" transform="translate(513 331)">
+      <path id="Path_236" data-name="Path 236" class="cls-2" d="M235.051,191.769,119.239,0,3.715,191.769a13.635,13.635,0,0,0,4.621,18.773l103.971,61.516a13.3,13.3,0,0,0,13.863,0l103.971-61.516A13.655,13.655,0,0,0,235.051,191.769Zm-73.357,21.949a60.04,60.04,0,1,1,0-84.91A60.138,60.138,0,0,1,161.693,213.718Z" transform="translate(3.216)"/>
+      <path id="Path_237" data-name="Path 237" class="cls-2" d="M245.487,78.6l-122.744,173L0,78.6l115.812,68.448a13.3,13.3,0,0,0,13.863,0Z" transform="translate(0 148.404)"/>
+      <path id="Path_238" data-name="Path 238" class="cls-3" d="M40.021,122.481a46.358,46.358,0,1,1,65.56,0,46.194,46.194,0,0,1-65.56,0" transform="translate(49.798 81.707)"/>
+    </g>
+  </g>
+</svg>
