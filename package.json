@@ -11,6 +11,7 @@
   "dependencies": {
     "animate.css": "^3.6.1",
     "fullpage.js": "^3.0.1",
+    "hover.css": "^2.3.2",
     "wow.js": "^1.2.2"
   }
 }

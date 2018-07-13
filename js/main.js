@@ -14,7 +14,7 @@ $header_top.find('a').on('click', function() {
 
 // fullpage customization
 $('#fullpage').fullpage({
-  sectionsColor: ['#220606', '#220606', '#220606', '#220606', '#220606'],
+  sectionsColor: ['#0C090A', '#0C090A', '#0C090A', '#0C090A', '#0C090A'],
   sectionSelector: '.vertical-scrolling',
   slideSelector: '.horizontal-scrolling',
   navigation: true,
@@ -64,3 +64,24 @@ $('#fullpage').fullpage({
   } 
 });
 
+$(document).ready(function() {
+  var 
+  menu_link = $('.widget_nav_menu .menu .menu-item-has-children a'),
+  sub_menu = $('.widget_nav_menu .menu li .sub-menu');   
+  
+  menu_link.on('click', function() {   
+    
+    if (!$(this).hasClass('active')) {
+      sub_menu.slideUp(300,'swing');
+        $(this).next().stop(true,true).slideToggle(300);
+      menu_link.removeClass('active');
+        $(this).addClass('active');
+    } 
+    else {
+      sub_menu.slideUp(300);
+      menu_link.removeClass('active');
+    }
+    
+  });
+
+});
