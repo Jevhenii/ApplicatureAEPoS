@@ -12,7 +12,7 @@ html.fp-enabled,
 .fp-enabled body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow: visible;
 
     /*Avoid flicker on slides transitions for mobile phones #336 */
     -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -33,7 +33,7 @@ html.fp-enabled,
 .fp-slides {
     z-index:1;
     height: 100%;
-    overflow: hidden;
+    overflow: visible;
     position: relative;
     -webkit-transition: all 0.3s ease-out; /* Safari<=6 Android<=4.3 */
     transition: all 0.3s ease-out;
@@ -82,11 +82,11 @@ html.fp-enabled,
     border-color: transparent transparent transparent #fff;
 }
 .fp-scrollable {
-    overflow: hidden;
+    overflow: visible;
     position: relative;
 }
 .fp-scroller{
-    overflow: hidden;
+    overflow: visible;
 }
 .iScrollIndicator{
     border: 0 !important;
@@ -188,7 +188,7 @@ html.fp-enabled,
     position: absolute;
     top: -2px;
     color: #fff;
-    font-size: 14px;
+    font-size: 16px;
     font-family: arial, helvetica, sans-serif;
     white-space: nowrap;
     max-width: 220px;

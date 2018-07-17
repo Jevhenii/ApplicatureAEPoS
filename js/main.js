@@ -3,8 +3,6 @@
 var $header_top = $('.header-top');
 var $nav = $('nav');
 
-
-
 // toggle menu 
 $header_top.find('a').on('click', function() {
   $(this).parent().toggleClass('open-menu');
@@ -64,8 +62,7 @@ $('#fullpage').fullpage({
   } 
 });
 
-$(document).ready(function() {
-  var 
+$(document).ready(function() { 
   menu_link = $('.widget_nav_menu .menu .menu-item-has-children a'),
   sub_menu = $('.widget_nav_menu .menu li .sub-menu');   
   
@@ -85,3 +82,51 @@ $(document).ready(function() {
   });
 
 });
+
+// Mooooooree canvas ^_____^
+
+let canvas_descr = document.getElementById('canvas-descr'),
+atx = canvas_descr.getContext('2d'),
+btx = canvas_descr.getContext('2d'),
+dp = window.devicePixelRatio;
+function fix_dp() {
+let style = {
+    height() {
+    return +getComputedStyle(canvas).getPropertyValue('height').slice(0,-2);
+    },
+    width() {
+    return +getComputedStyle(canvas).getPropertyValue('width').slice(0,-2);
+    }
+}
+canvas_descr.setAttribute('width', style.width() * dp);
+canvas_descr.setAttribute('height', style.height() * dp);
+}
+// function for Fixing HTML5 2d Canvas Blur 
+function draw() {
+//call the dpi fix every time 
+//canvas is redrawn
+fix_dp();
+//draw stuff!
+// top-left
+atx.setLineDash([6, 4, 2, 4]);
+atx.beginPath();
+atx.moveTo(624, 30);
+atx.strokeStyle = '#ffffff';
+atx.lineTo(624, 360);
+atx.stroke();
+// center   
+btx.setLineDash([6, 4, 2, 4]);
+btx.beginPath();
+btx.moveTo(624, 540);
+btx.strokeStyle = '#ffffff';
+btx.lineTo(624, 850);
+btx.stroke();
+requestAnimationFrame(draw);
+}
+requestAnimationFrame(draw);
+
+var aspectRatio = 1.5;    // height:width = 3:2
+canvas_descr.height = canvas_descr.width * aspectRatio;
+
+// Mooooooree canvas ^_____^
+

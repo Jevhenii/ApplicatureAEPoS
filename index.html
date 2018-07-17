@@ -11,7 +11,7 @@
 <main>
     <header>
         <div class="header-top clearfix">
-            <h1 class="l-left"><a href="#firstSection">Logo</a></h1>
+            <h1 class="l-left"><a href="#firstSection"><img src="css/img/applicature-logo-1.png" alt="" style="padding-top: 25px;"></a></h1>
             <a class="l-right toggle-menu" href="#">
                 <i></i>
                 <i></i>
@@ -34,7 +34,7 @@
                     <a href="#fourthSection" title="Fourth Section">Contact Us</a>
                 </li>
                 <li data-menuanchor="fifthSection">
-                    <a href="#fifthSection" title="First Slide">Common Questions </a>
+                    <a href="#fifthSection" title="First Slide">FAQ</a>
                 </li>
             </ul>
         </nav>
@@ -50,6 +50,7 @@
             </div>
         </section>
         <section class="vertical-scrolling description">
+            <canvas id="canvas-descr" width="2000" height="1700"></canvas>
             <p class="description_text">
                 AEPoS Is a lightweight Ethereum-based <br>
                 blockchain solution with the ecological <br>
@@ -58,7 +59,61 @@
             </p>
         </section>
         <section class="vertical-scrolling">
-            <div class="hero">
+            <div class="hero" class="canvas-wrap">
+                    <canvas id="canvas" width="2000" height="1200"></canvas>
+                    <script>
+                // function for Fixing HTML5 2d Canvas Blur
+                    let canvas = document.getElementById('canvas'),
+                    ctx = canvas.getContext('2d'),
+                    dtx = canvas.getContext('2d'),
+                    etx = canvas.getContext('2d'),
+                    dpi = window.devicePixelRatio;
+                    function fix_dpi() {
+                    let style = {
+                        height() {
+                        return +getComputedStyle(canvas).getPropertyValue('height').slice(0,-2);
+                        },
+                        width() {
+                        return +getComputedStyle(canvas).getPropertyValue('width').slice(0,-2);
+                        }
+                    }
+                    canvas.setAttribute('width', style.width() * dpi);
+                    canvas.setAttribute('height', style.height() * dpi);
+                    }
+                // function for Fixing HTML5 2d Canvas Blur 
+                    function draw() {
+                    //call the dpi fix every time 
+                    //canvas is redrawn
+                    fix_dpi();
+                    //draw stuff!
+                    // top-left
+                    ctx.setLineDash([6, 4, 2, 4]);
+                    ctx.beginPath();
+                    ctx.moveTo(40, 290);
+                    ctx.strokeStyle = '#ffffff';
+                    ctx.lineTo(1200, 600);
+                    ctx.stroke();
+                    // bottom-left
+                    dtx.setLineDash([6, 4, 2, 4]);
+                    dtx.beginPath();
+                    dtx.moveTo(40, 600);
+                    dtx.strokeStyle = '#ffffff';
+                    dtx.lineTo(1230, 290);
+                    dtx.stroke();
+                    // center   
+                    etx.setLineDash([6, 4, 2, 4]);
+                    etx.beginPath();
+                    etx.moveTo(624, 0);
+                    etx.strokeStyle = '#ffffff';
+                    etx.lineTo(624, 1000);
+                    etx.stroke();
+                    requestAnimationFrame(draw);
+                    }
+                    requestAnimationFrame(draw);
+
+                    var aspectRatio = 1.5;    // height:width = 3:2
+                    canvas.height = canvas.width * aspectRatio;
+</script>
                 <div class="hero-descr_wrapper">
                     <p class="description_text">Lightweight <br> industry networks</p>
                     <span class="helper"></span>
@@ -66,7 +121,7 @@
                         fees</p>
                 </div>
                 <div>
-                    <img id="main-banner" style="width: 300px; height: 400px" src="css/img/Group 72.svg" alt="Sorry">
+                    <img id="main-banner" style="width: 300px; height: 400px; padding-top: 50px; padding-right: 1px;" src="css/img/Group 72.svg" alt="Sorry">
                 </div>
                 <div class="hero-descr_wrapper">
                     <p class="description_text">Customizable UI <br> wallets</p>
@@ -75,7 +130,54 @@
                 </div>
             </div>
         </section>
+       
         <section class="vertical-scrolling link-wrapper">
+            <canvas id="canvas-link" width="2000" height="1500"></canvas>
+            <script>
+                let canvas_link = document.getElementById('canvas-link'),
+xtx = canvas_link.getContext('2d'),
+ytx = canvas_link.getContext('2d'),
+dpz = window.devicePixelRatio;
+function fix_dpz() {
+let style = {
+    height() {
+    return +getComputedStyle(canvas).getPropertyValue('height').slice(0,-2);
+    },
+    width() {
+    return +getComputedStyle(canvas).getPropertyValue('width').slice(0,-2);
+    }
+}
+canvas_link.setAttribute('width', style.width() * dpz);
+canvas_link.setAttribute('height', style.height() * dpz);
+}
+// function for Fixing HTML5 2d Canvas Blur 
+function draw() {
+//call the dpi fix every time 
+//canvas is redrawn
+fix_dpz();
+//draw stuff!
+
+// center-top
+xtx.setLineDash([6, 4, 2, 4]);
+xtx.beginPath();
+xtx.moveTo(624, 0);
+xtx.strokeStyle = '#ffffff';
+xtx.lineTo(624, 335);
+xtx.stroke();
+// center-bottom   
+ytx.setLineDash([6, 4, 2, 4]);
+ytx.beginPath();
+ytx.moveTo(624, 400);
+ytx.strokeStyle = '#ffffff';
+ytx.lineTo(624, 500);
+ytx.stroke();
+requestAnimationFrame(draw);
+}
+requestAnimationFrame(draw);
+
+var aspectRatio = 1.5;    // height:width = 3:2
+canvas_link.height = canvas_link.width * aspectRatio;
+            </script>
             <div class="link-group">
                 <a href="#" class="link_contact hvr-bounce-to-right">github</a>
                 <a href="#" class="link_contact hvr-bounce-to-right">talk to dev team</a>
@@ -197,11 +299,9 @@
     </div>
 </main>
 
-
-<script src="js/main.js"></script>
 <script src="js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="js/fullpage.js"></script>
 <script src="js/wow.min.js"></script>
+<script type="text/javascript" src="js/fullpage.js"></script>
 <script src="js/main.js"></script>
 <script>
     new WOW().init();
